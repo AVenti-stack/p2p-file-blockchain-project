@@ -1,0 +1,58 @@
+<section id="all">
+    {% include 'menu.html' %}
+    <div class="content">
+        <div class="content-head">
+            <div class="content-head-left">
+                <ul class="list-head">
+                    <li><a
+                        {% if PAGE != "index" %}
+                            onclick="changePage('index')"
+                        {% endif %}
+                    >
+                        {% if PAGE == "index" %}
+                        <i class="fas fa-home lh-cstm-i active"></i></a></li>
+                        {% else %}
+                        <i class="fas fa-home lh-cstm-i"></i></a></li>
+                        {% endif %}
+                    <li><a
+                        {% if PAGE != "upload" %}
+                            onclick="changePage('upload')"
+                        {% endif %}
+                    >
+                        {% if PAGE == "upload" %}
+                        <i class="fas fa-cloud-upload-alt lh-cstm-i active"></i></a></li>
+                        {% else %}
+                        <i class="fas fa-cloud-upload-alt lh-cstm-i"></i></a></li>
+                        {% endif %}
+                    <li><a
+                        {% if PAGE != "download" %}
+                            onclick="changePage('download')"
+                        {% endif %}
+                    >
+                        {% if PAGE == "download" %}
+                        <i class= "fas fa-window-maximize lh-cstm-i active"></i></a></li>
+                        {% else %}
+                        <i class= "fas fa-window-maximize lh-cstm-i"></i></a></li>
+                        {% endif %}
+                </ul>
+            </div>
+            <div class="content-head-right">
+                <x-flx el="Searchbar" id="search-bar"></x-flx>
+            </div>
+        </div>
+        <h1>{{ name }}</h1>
+        {% if PAGE == "upload" %}
+            <button type="button" class="collapsible" id="fb-toggler"><i class= "fas fa-upload"></i> Upload New File</button>
+            <div class="filebrowserdiv invisible">
+                <h2>Select a file...</h2>
+                <!--This is where the file browser thing is-->
+                <x-flx el="Filewidget" id="filewidget"></x-flx>
+                <x-flx el="Uploadwidget" id="uploadwidget"></x-flx>
+            </div>
+            <h2>Your Uploads</h2>
+        {% endif %}
+        <!--ADDS IN A SORT option TO THE EXPLORER TABLE -->
+        <x-flx el="SortOptions" id="sort-options"></x-flx>
+        <x-flx el="MainTable" id="table-chain" data-type="{{ type }}"></x-flx>
+    </div>
+</section>

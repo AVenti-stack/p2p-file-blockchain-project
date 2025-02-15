@@ -1,0 +1,29 @@
+<section id="all">
+    <div class="spash">
+        {% include 'logo.html' %}
+        <div class="splash-box">
+            <div class="splash-box-left">
+                <div class="grid-container-splash">
+                    <div class="splash-percent">
+                        <span id="bootstrap-progress-text">0%</span>
+                    </div>
+                    <div class="grid-border-splash">
+                        <div class="grid-grey-splash" style="width:0" id="bootstrap-progress-bar"></div>
+                    </div>
+                    <div class="splash-peers">
+                        <span id="bootstrap-text">Finding peers...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="splash-box-right">
+                <a class="btn-continue" disabled id="continue-btn">continue</a>
+            </div>
+        </div>
+
+        <div class="af-splash-box">
+            <h1>Want to skip the wait? <span>Select a bootstrap node to get started fast.</span></h1>
+            <p>Please note that bootstrap nodes are centralized services. Please ensure you trust their host before using.</p>
+            <x-flx el="Bootstrap"></x-flx>
+        </div>
+    </div>
+</section>

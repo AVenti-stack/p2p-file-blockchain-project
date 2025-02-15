@@ -1,0 +1,607 @@
+/* 
+        Primary colors: #211E49 #1A183F 
+        Secondary colors: #6F6F87 #1A183F #DBDBDB
+        Typography: Inter
+
+*/
+
+/* General CSS */
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('webfonts/Roboto-Regular.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 17px;
+    color: #6F6F87;
+    padding: 5px;
+}
+
+body {
+    background: #211E49;
+}
+
+#all {
+    display: flex;
+    padding: 0;
+    height: 100vh;
+}
+
+.menu {
+    background-color: #211E49;
+    flex: 1;
+    padding: 30px 0;
+}
+
+.content {
+    background-color: #1A183F;
+    flex: 4;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+
+.page-title {
+    padding: 0;
+}
+
+.page-title p {
+    margin: 0;
+    font-size: 19px;
+    padding: 0;
+}
+
+.logo-brand {
+    text-align: center;
+}
+
+.logo-brand img {
+    width: 220px;
+}
+
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.menu-list li {
+    padding: 15px 0;
+}
+
+.menu-list a {
+    text-decoration: none;
+    transition: .2s;
+    text-transform: capitalize;
+}
+
+.menu-list li a i {
+    width: 30px;
+    text-align: center;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+.menu-list li a span {
+    transition: .5s;
+}
+
+.menu-list a:hover, .menu-list a:hover > i, .menu-list a:hover > span {
+    color: #fff;
+}
+
+.menu-list a:active, .menu-list a:focus, .menu-list a:active > i, .menu-list a:focus > i, .menu-list a:active > span, .menu-list a:focus > span {
+    color: #2494C1;
+}
+
+.nav {
+    margin: 30px 0;
+}
+
+
+.content-head {
+    display: flex;
+}
+
+.content-head-left {
+    flex: 1;
+}
+
+.content-head-right {
+    flex: 1;
+}
+
+.list-head {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.lh-cstm-i {
+    font-size: 20px;
+}
+
+.lh-cstm-i:hover, .lh-cstm-i.active {
+    color: #fff;
+}
+
+.noto-bell a {
+    text-decoration: none;
+    position: absolute;
+    top: -9px;
+}
+
+.noto-bell {
+    background-color: #2494C1;
+    border-radius: 50px;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 17px 0px #2494c1;
+}
+
+.noto-bell i {
+    font-size: 8px;
+    color: #ffffff;
+    padding: 1px;
+}
+
+.invisible {
+    visibility: collapse;
+}
+
+.noto-bell span {
+    font-size: 8px;
+    color: #ffffff;
+    padding: 1px;
+}
+
+
+.search-head {
+    width: 100%;
+    position: relative;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-head {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+
+.search-head-i {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 23px;
+    color: #6f6f8782;
+}
+
+/* table styling */
+.list-view {
+    padding: 0;
+}
+
+#table-chain {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+#table-chain th {
+    padding: 0px 8px;
+}
+
+#table-chain td {
+    padding: 0px 8px;
+    color: #fff;
+    height: 50px;
+    font-size: 14px;
+}
+
+#table-chain tr {
+    background-color: #1B1940;
+}
+
+#table-chain tr:nth-child(even) {
+    background-color: #6F6F87;
+}
+
+#table-chain tr:hover {
+    background-color: #306A75;
+}
+
+#table-chain th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1B1940;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+#table-chain td span {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 14px;
+}
+
+.view-box {
+    margin: 10px 12px 20px 12px;
+    padding: 0;
+}
+
+.view-link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0px 0px 5px 0px;
+    margin: 0 12px;
+    border-bottom: 3px solid #ff000000;
+}
+
+.view-link:hover {
+    border-bottom: 3px solid #F95D74;
+}
+
+
+.grid-view {
+    padding: 10px;
+    width: 70vw;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto;
+}
+
+.grid-card {
+    background-color: #5A5A98;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.grid-border {
+    background-color: #E5ECF2;
+    padding: 0;
+    border-radius: 100px;
+}
+
+.grid-grey {
+    background-color: #1B9EC6;
+    padding: 0;
+    height: 4px;
+    border-radius: 100px;
+}
+
+.grid-card h6 {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.grid-card i {
+    float: left;
+    color: #F95D74;
+}
+
+.grid-container {
+    padding: 0;
+    margin-top: 8px;
+}
+
+.grid-container span {
+    color: #fff;
+    font-size: 25px;
+}
+
+
+.dropbtn i {
+    padding: 0px;
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: auto;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0 0 0, 0.2);
+    z-index: 1;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    padding: 10px 10px 10px 0px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown-content p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.dropdown-content a i {
+    padding: 0;
+    margin-right: 20px;
+}
+
+.dropdown-content p i {
+    float: right;
+    font-size: 15px;
+}
+
+
+.spash {
+    background-color: #211E49;
+    flex: 1;
+    padding: 30px;
+}
+
+.splash-box {
+    display: flex;
+}
+
+.splash-box-left {
+    flex: 2;
+}
+
+.splash-box-right {
+    flex: 1;
+}
+
+.grid-container-splash {
+    padding: 0;
+    display: flex;
+}
+
+.splash-percent {
+    padding: 0;
+    width: 5%;
+    text-align: center;
+}
+
+.splash-percent span {
+    color: #fff;
+    font-size: 13px;
+    padding: 0;
+}
+
+.grid-border-splash {
+    background-color: #E5ECF2;
+    padding: 0;
+    border-radius: 100px;
+    height: 7px;
+    width: 75%;
+    margin: 8px 0;
+}
+
+.grid-grey-splash {
+    background-color: #1B9EC6;
+    padding: 0;
+    height: 7px;
+    border-radius: 100px;
+}
+
+.splash-peers {
+    padding: 0 0 0 10px;
+    width: 20%;
+
+}
+
+.splash-peers span {
+    color: #fff;
+    font-size: 13px;
+    padding: 0;
+}
+
+.btn-continue {
+    background-color: #6201E7;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: .5s;
+    transition-property: color, background-color;
+}
+
+.btn-download {
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+a.btn-continue {
+    padding: 8px 100px;
+}
+
+.btn-continue[disabled] {
+    background-color: #5f5f5f;
+}
+
+.btn-continue:hover:not([disabled]) {
+    background-color: #fff;
+    color: #6201E7;
+}
+
+.af-splash-box {
+    margin: auto;
+}
+
+.af-splash-box h1 {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.af-splash-box h1 span {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+ul.af-list {
+    list-style: none;
+    width: 70%;
+    margin: 5px auto 0 auto;
+}
+
+
+.s-container {
+    position: relative;
+    padding-left: 47px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.s-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: #eee;
+    border-radius: 50px;
+}
+
+/* On mouse-over, add a grey background color */
+.s-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.s-container input:checked ~ .checkmark {
+    background-color: #eee;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.s-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.s-container .checkmark:after {
+    left: 11px;
+    top: 3px;
+    width: 10px;
+    height: 20px;
+    border: solid #bbbbbb;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+ul.af-list li {
+    margin-bottom: 5px;
+}
+
+span.check-text {
+    background-color: #eeeeee;
+    font-size: 25px;
+    width: 77%;
+    display: inline-flex;
+}
+
+input.chain-check {
+    background-color: #eeeeee;
+    font-size: 25px;
+    width: 77%;
+    font-style: oblique;
+    border: 0;
+}
+
+.flx-_FileBrowserJS{
+   height: 50vh;
+   overflow-y: auto;
+}
+
+.collapsible {
+  background-color: #6201E7;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible:after {
+  content: '\02795';
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.activeC.collapsible:hover {
+  background-color: #fff;
+  color: #6201E7;
+}
+
+.activeC.collapsible:after {
+  content: "\2796";
+}
+
+.filebrowserdiv
+{
+  padding: 0 18px;
+  overflow: hidden;
+  display: block;
+}
+
+
